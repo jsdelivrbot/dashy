@@ -1,0 +1,30 @@
+import React from 'react';
+import Grid from './Grid';
+import { Menu, Link, Header, Divider, Icon} from 'semantic-ui-react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+    background-color: #555577;
+    padding: 60px 20px 20px 20px;
+`;
+
+export default ({children}) => (
+<div>
+    <Menu fixed='top' inverted>
+        <Menu.Item as={Link} to='/'>
+            Home
+        </Menu.Item>
+    </Menu>
+    <Container>
+        <Header as='h2' icon inverted textAlign='center'>
+            <Icon name='grid layout' />
+            Dashy
+            <Header.Subheader>
+                A convinient dashboard for your life.
+            </Header.Subheader>
+        </Header>
+        <Divider />
+        <Grid rows={4} />
+        {children}
+    </Container>
+</div>);
