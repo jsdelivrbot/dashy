@@ -9,7 +9,8 @@
     "start": "node server/",
     "build-prod": "webpack --mode production",
     "clean": "rm -rf ./dist",
-    "browse": "open http://localhost:5000/"
+    "browse": "open http://localhost:5000/",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
   },
   "dependencies": {
     "hapi": "^17.6.0",
