@@ -1,13 +1,31 @@
-var express = require('express')
-var app = express()
+'use strict';
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/public'))
+const Hapi = require('hapi');
 
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
+const server = Hapi.server({
+  port: 5000,
+  host: 'localhost'
+});
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+server.route({
+  method: 'GET',
+  path: '/',
+  handler: (request, h) => {
+
+      return 'Hello, world!';
+  }
+});
+
+const init = async () => {
+
+  await server.start();
+  console.log(`Server running at: ${server.info.uri}`);
+};
+
+process.on('unhandledRejection', (err) => {
+
+  console.log(err);
+  process.exit(1);
+});
+
+init();

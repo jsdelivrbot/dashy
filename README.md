@@ -1,6 +1,10 @@
-# node-js-sample
+# Dashy
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+A customizable personal dashboard app. 
+
+## What is it?
+
+Currently, a barebones Node.js app using [Express 4](http://expressjs.com/).
 
 ## Running Locally
 
