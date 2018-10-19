@@ -1,7 +1,8 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
-module.exports = {
+module.exports = (env, argv) => ({
   // Entry and output
   entry: './src/index.js',
   output: {
@@ -61,6 +62,25 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "index.html"
+    }),
+    argv.mode === 'development' ? false : new FaviconsWebpackPlugin({
+      logo: path.join(__dirname, './static/favicon/icon-home.png'),
+      prefix: 'icons-[hash]/',
+      persistentCache: true,
+      inject: true,
+      title: 'Dashy',
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
     })
-  ]
-};
+  ].filter(Boolean)
+});

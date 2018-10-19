@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from './Grid';
-import { Menu, Link, Header, Divider, Icon} from 'semantic-ui-react';
+import { Menu, Header, Divider, Icon} from 'semantic-ui-react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -11,7 +11,7 @@ const Container = styled.div`
 export default ({children}) => (
 <div>
     <Menu fixed='top' inverted>
-        <Menu.Item as={Link} to='/'>
+        <Menu.Item as='a' to='/'>
             Home
         </Menu.Item>
     </Menu>

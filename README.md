@@ -1,12 +1,14 @@
 # Dashy
 
+![](https://img.shields.io/badge/Node-v8.12.0-brightgreen.svg) ![](https://david-dm.org/sparkboom/dashy.svg)
+
 A customizable personal dashboard app. 
 
 ## What is it?
 
-Dashy is a Node.js app using [|Hapi](http://hapijs.com/), and the usual suspects - Webpack, and Babel.
+Dashy is a [Node.js](https://nodejs.org/en/) app using [Hapi](http://hapijs.com/), and the usual suspects - [Webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/).
 
-Front-end uses React, Styled-Components, and Semantic-UI (React.)
+Front-end uses [React](https://reactjs.org/), [Styled-Components](https://www.styled-components.com/), and [Semantic UI React](https://react.semantic-ui.com/)
 
 ## Running Locally
 
@@ -37,17 +39,3 @@ heroku create
 git push heroku master
 heroku open
 ```
-
-Alternatively, you can deploy your own copy of the app using the web-based flow:
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-### Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [10 Habits of a Happy Node Hacker](https://blog.heroku.com/archives/2014/3/11/node-habits)
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
