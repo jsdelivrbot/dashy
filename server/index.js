@@ -6,7 +6,7 @@ const Inert = require('inert');
 
 const server = Hapi.server({
   port: process.env.PORT || 5000,
-  host: 'localhost',
+  host: '0.0.0.0',
   routes: {
       files: {
           relativeTo: path.join(__dirname, '../')
