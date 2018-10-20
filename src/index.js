@@ -2,6 +2,7 @@ import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "@babel/polyfill";
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`

@@ -13,6 +13,7 @@
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "hapi": "^17.6.0",
     "inert": "^5.1.0",
     "lodash": "^4.17.11",
