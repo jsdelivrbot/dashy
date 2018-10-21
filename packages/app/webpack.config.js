@@ -64,7 +64,7 @@ module.exports = (env, argv) => ({
       filename: "index.html"
     }),
     argv.mode === 'development' ? false : new FaviconsWebpackPlugin({
-      logo: path.join(__dirname, './static/favicon/icon-home.png'),
+      logo: path.resolve('./static/favicon/icon-home.png'),
       prefix: 'icons-[hash]/',
       persistentCache: true,
       inject: true,

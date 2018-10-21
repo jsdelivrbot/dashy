@@ -8,16 +8,15 @@ const server = Hapi.server({
   port: process.env.PORT || 5000,
   host: '0.0.0.0',
   routes: {
-      files: {
-          relativeTo: path.join(__dirname, '../')
-      }
+    files: {
+      relativeTo: path.join(__dirname, '../app')
+    }
   }
 });
 
 const init = async () => {
 
   await server.register(Inert);
-
   server.route({
     method: 'GET',
     path: '/{param*}',

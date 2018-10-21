@@ -1,0 +1,25 @@
+{
+  "name": "@dashy/service",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A customizable personal dashboard app.",
+  "main": "src/index.js",
+  "repository": "https://github.com/sparkboom/dashy/tree/master/packages/server",
+  "scripts": {
+    "start": "node .",
+    "browse": "node scripts/open"
+  },
+  "dependencies": {
+    "hapi": "^17.6.0",
+    "inert": "^5.1.0"
+  },
+  "engines": {
+    "node": "^v8.12.0",
+    "yarn": "^1.10.0"
+  },
+  "author": "Matthew McLeod",
+  "contributors": [
+    "Matthew McLeod <matt@mattmcleod.co.uk>"
+  ],
+  "license": "MIT"
+}

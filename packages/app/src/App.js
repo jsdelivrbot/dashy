@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from './Grid';
+import Grid from '@dashy/simplecell';
 import { Menu, Header, Divider, Icon} from 'semantic-ui-react';
 import styled from 'styled-components';
 
