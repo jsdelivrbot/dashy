@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '@dashy/simplecell';
+import {SimpleGrid} from '@dashy/simplecell';
 import { Menu, Header, Divider, Icon} from 'semantic-ui-react';
 import styled from 'styled-components';
 
@@ -24,7 +24,7 @@ export default ({children}) => (
             </Header.Subheader>
         </Header>
         <Divider />
-        <Grid rows={4} />
+        <SimpleGrid rows={4} cols={4} />
         {children}
     </Container>
 </div>);

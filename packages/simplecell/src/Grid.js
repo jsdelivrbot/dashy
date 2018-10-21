@@ -12,8 +12,7 @@ const StyledImage = styled(Image)`
     top: 13px;
 `;
 
-const GridCell = ({row, col}) => (
-<Grid.Column>
+const GridCell = ({row, col}) => (<Grid.Column>
     <Segment padded>
         <Label attached='top left'>{row}.{col}</Label>
         <Label attached='top right'>
@@ -25,11 +24,14 @@ const GridCell = ({row, col}) => (
 );
 
 const GridRow = ({row, cols}) => (
-<Grid.Row>
-    { _.range(cols).map( (i) => (<GridCell key={i} row={row} col={i+1} />) ) }
-</Grid.Row>);
+    <Grid.Row>
+        { _.range(cols).map( (i) => (<GridCell key={i} row={row} col={i+1} />) ) }
+    </Grid.Row>
+);
 
-export default  ({rows=ROWS, cols=COLS}) => (
-<Grid columns={cols}>
-   { _.range(rows).map( (i) => (<GridRow key={i} row={i+1} cols={cols} />) ) }
-</Grid>);
+export const SimpleGrid = ({cols, rows}) => (
+    <Grid columns={cols}>
+        { _.range(rows).map( (i) => (<GridRow key={i} row={i+1} cols={cols} />) ) }
+    </Grid>
+
+);

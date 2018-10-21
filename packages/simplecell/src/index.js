@@ -1,3 +1,1 @@
-import Grid from './Grid';
-
-export default Grid;
+export {SimpleGrid} from './Grid';

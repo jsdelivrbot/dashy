@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "lerna run clean",
     "build": "lerna run build",
-    "dev": "lerna run dev",
+    "watch": "lerna run watch",
     "start": "lerna run start",
     "build-prod": "lerna run build-prod",
     "clean": "lerna run clean",
