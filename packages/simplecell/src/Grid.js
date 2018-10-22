@@ -12,7 +12,8 @@ const StyledImage = styled(Image)`
     top: 13px;
 `;
 
-const GridCell = ({row, col}) => (<Grid.Column>
+const GridCell = ({row, col}) => (
+<Grid.Column>
     <Segment padded>
         <Label attached='top left'>{row}.{col}</Label>
         <Label attached='top right'>
@@ -33,5 +34,4 @@ export const SimpleGrid = ({cols, rows}) => (
     <Grid columns={cols}>
         { _.range(rows).map( (i) => (<GridRow key={i} row={i+1} cols={cols} />) ) }
     </Grid>
-
 );

@@ -1,21 +1,14 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const path = require('path');
-const fs = require('fs');
+const webpack = require('webpack');
+const paths = require('./paths');
 
-// interesting - https://github.com/tol-is/create-react-app-monorepo-example/blob/master/config/paths.js
-const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
-const appSrc = resolveApp('..');
-const dashySrc = resolveApp('../../node_modules/@dashy');
-console.log('appSrc, dashySrc', appSrc, dashySrc);
-
-module.exports = (env, argv) => ({
+module.exports = {
 
   // Entry and output
-  entry: './src/index.js',
+  entry: paths.entryJs,
   output: {
-    filename: 'dashy.js'
+    filename: 'dashy-[chunkhash].js'
   },
 
   // Base path for source files are in the src directory, or node_modules directory
@@ -34,7 +27,7 @@ module.exports = (env, argv) => ({
     rules: [
       {
         test: /\.js$/,
-        include: [appSrc],
+        include: [paths.packagesDir],
         exclude: /node_modules/,
         use: {
           loader: require.resolve('babel-loader'),
@@ -77,29 +70,9 @@ module.exports = (env, argv) => ({
   // Plugin configuration
   plugins: [
     new HtmlWebPackPlugin({
-      template: './src/index.html',
+      template: paths.entryHtml,
       filename: 'index.html'
     }),
-    argv.mode === 'development'
-      ? false
-      : new FaviconsWebpackPlugin({
-          logo: path.resolve('./static/favicon/icon-home.png'),
-          prefix: 'icons-[hash]/',
-          persistentCache: true,
-          inject: true,
-          title: 'Dashy',
-          icons: {
-            android: true,
-            appleIcon: true,
-            appleStartup: true,
-            coast: false,
-            favicons: true,
-            firefox: true,
-            opengraph: false,
-            twitter: false,
-            yandex: false,
-            windows: false
-          }
-        })
-  ].filter(Boolean)
-});
+    new webpack.ProgressPlugin()
+  ] 
+};

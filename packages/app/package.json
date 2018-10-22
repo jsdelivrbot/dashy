@@ -6,10 +6,6 @@
   "main": "dist/index.js",
   "repository": "https://github.com/sparkboom/dashy/tree/master/packages/app",
   "scripts": {
-    "build": "webpack --mode development",
-    "build-prod": "webpack --mode production",
-    "watch": "yarn build -- --watch",
-    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "clean": "rm -rf ./dist"
   },
   "dependencies": {
