@@ -9,7 +9,7 @@ const server = Hapi.server({
   host: '0.0.0.0',
   routes: {
     files: {
-      relativeTo: path.join(__dirname, '../app')
+      relativeTo: path.join(__dirname, '../../dist')
     }
   }
 });
@@ -22,7 +22,7 @@ const init = async () => {
     path: '/{param*}',
     handler: {
       directory: {
-        path: 'dist',
+        path: './',
         index: ['index.html']
       }
     }
