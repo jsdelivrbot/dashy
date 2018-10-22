@@ -9,7 +9,7 @@ const addons = addonsArg => []
 
 module.exports = (env, argv) =>  {
     if (!env) {
-        throw new Error('You must provide an environment flag using --env.env= development|production');
+        throw new Error('You must provide an environment flag using --env.env= dev|prod');
     }
 
     const envConf = require(`./tools/build/webpack.${env.env}`);
