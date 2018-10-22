@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "repository": "https://github.com/sparkboom/dashy/tree/master/packages/server",
   "scripts": {
+    "launch": "yarn start & yarn browse",
     "start": "node .",
     "browse": "node scripts/open"
   },
@@ -21,5 +22,8 @@
   "contributors": [
     "Matthew McLeod <matt@mattmcleod.co.uk>"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "opn": "^5.4.0"
+  }
 }
