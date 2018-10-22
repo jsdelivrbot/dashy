@@ -15,7 +15,7 @@
     "watch:prod": "yarn build -- --watch --env.env=prod",
     "watch": "yarn build -- --watch",
     "launch": "lerna run launch",
-    "start": "lerna run start",
+    "start": "./node_modules/.bin/lerna run start",
     "clean": "lerna run clean",
     "browse": "lerna run browse"
   },
