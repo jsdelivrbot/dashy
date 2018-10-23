@@ -12,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const wrapper = document.getElementById('app');
-wrapper &&
+if (wrapper) {
     ReactDOM.render(
         <App>
             {' '}
@@ -20,3 +20,4 @@ wrapper &&
         </App>,
         wrapper,
     );
+}

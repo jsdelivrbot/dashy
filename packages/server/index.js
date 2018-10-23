@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const path = require('path');
 const Hapi = require('hapi');
 const Inert = require('inert');

@@ -5,6 +5,7 @@ const zopfli = require('@gfx/zopfli');
 const paths = require('./paths');
 
 module.exports = {
+    mode: 'production',
     module: {
         rules: [
             {
