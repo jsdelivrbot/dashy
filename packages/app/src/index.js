@@ -1,9 +1,9 @@
 import 'semantic-ui-css/semantic.min.css';
-import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "@babel/polyfill";
+import '@babel/polyfill';
 import { createGlobalStyle } from 'styled-components';
+import App from './App';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -11,5 +11,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const wrapper = document.getElementById("app");
-wrapper && ReactDOM.render(<App> <GlobalStyle /> </App>, wrapper); 
+const wrapper = document.getElementById('app');
+wrapper &&
+    ReactDOM.render(
+        <App>
+            {' '}
+            <GlobalStyle />{' '}
+        </App>,
+        wrapper,
+    );

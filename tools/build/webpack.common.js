@@ -1,5 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const DynamicCDNWebpackPlugin = require('dynamic-cdn-webpack-plugin')
 const webpack = require('webpack');
 const paths = require('./paths');
 
@@ -8,7 +8,7 @@ module.exports = {
   // Entry and output
   entry: paths.entryJs,
   output: {
-    filename: 'dashy-[chunkhash].js'
+    filename: 'dashy-[hash].js'
   },
 
   // Base path for source files are in the src directory, or node_modules directory
@@ -46,10 +46,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      },
-      {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         use: [
           {
@@ -73,6 +69,7 @@ module.exports = {
       template: paths.entryHtml,
       filename: 'index.html'
     }),
+    new DynamicCDNWebpackPlugin(),
     new webpack.ProgressPlugin()
   ] 
 };

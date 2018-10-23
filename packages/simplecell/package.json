@@ -1,24 +1,25 @@
 {
-  "name": "@dashy/simplecell",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A customizable cell for the dashy app",
-  "main": "./src/index.js",
-  "repository": "https://github.com/sparkboom/dashy/tree/master/packages/simplecell",
-  "dependencies":{
-    "lodash": "^4.17.11",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "semantic-ui-react": "^0.82.5",
-    "styled-components": "^4.0.2"
-  },
-  "engines": {
-    "node": "^v8.12.0",
-    "yarn": "^1.10.0"
-  },
-  "author": "Matthew McLeod",
-  "contributors": [
-    "Matthew McLeod <matt@mattmcleod.co.uk>"
-  ],
-  "license": "MIT"
+    "name": "@dashy/simplecell",
+    "private": true,
+    "version": "0.1.0",
+    "description": "A customizable cell for the dashy app",
+    "main": "./src/index.js",
+    "repository": "https://github.com/sparkboom/dashy/tree/master/packages/simplecell",
+    "dependencies": {
+        "lodash": "^4.17.11",
+        "prop-types": "^15.6.2",
+        "react": "^16.5.2",
+        "react-dom": "^16.5.2",
+        "semantic-ui-react": "^0.82.5",
+        "styled-components": "^4.0.2"
+    },
+    "engines": {
+        "node": "^v8.12.0",
+        "yarn": "^1.10.0"
+    },
+    "author": "Matthew McLeod",
+    "contributors": [
+        "Matthew McLeod <matt@mattmcleod.co.uk>"
+    ],
+    "license": "MIT"
 }

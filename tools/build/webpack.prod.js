@@ -1,7 +1,17 @@
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CompressionWebpackPlugin = require('compression-webpack-plugin');
 const paths = require('./paths');
 
 module.exports = {
+  module:{
+      rules: [
+          {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+          }
+      ]
+  },
   plugins: [
     new FaviconsWebpackPlugin({
       logo: paths.entryFavicon,
@@ -21,6 +31,21 @@ module.exports = {
         yandex: false,
         windows: false
       }
+    }),
+    new UglifyJsPlugin({
+      sourceMap: true
+    }),
+    new CompressionWebpackPlugin({
+      compressionOptions: {
+         numiterations: 15
+      },
+      algorithm(input, compressionOptions, callback) {
+        return zopfli.gzip(input, compressionOptions, callback);
+      },
+      filename: '[path].gz[query]',
+      test: /\.js$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
   ]
 };

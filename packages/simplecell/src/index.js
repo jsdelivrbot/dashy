@@ -1,1 +1,3 @@
-export {SimpleGrid} from './Grid';
+import SimpleGrid from './SimpleGrid';
+
+export default SimpleGrid;
