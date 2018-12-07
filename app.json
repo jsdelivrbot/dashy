@@ -2,6 +2,6 @@
   "name": "Dashy",
   "description": "A customizable personal dashboard app. ",
   "repository": "https://github.com/sparkboom/dashy",
-  "logo": "https://rawgit.com/heroku/node-js-sample/master/public/node.svg",
+  "logo": "https://cdn.jsdelivr.net/gh/heroku/node-js-sample/public/node.svg",
   "keywords": ["node", "hapi", "static"]
 }
